@@ -2,19 +2,21 @@
 using namespace std;
 
 void getTwoValues(int &begin, int &end) {
+    do {
     cout << "Insert two integer values: " << endl;
     cin >> begin >> end;
     if (begin >= end) {
         cout << "Invalid input. \n";
     }
+}
 while (begin >= end);
 }
 bool Prime(int n) {
     if (n <= 1) {
         return false; 
-        }
+    }
     
-        for (int i = 2; i * i <= n; ++i) {
+    for (int i = 2; i * i <= n; ++i) {
         if (n % i == 0) {
             return false;
         }
